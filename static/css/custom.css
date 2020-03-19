@@ -1,20 +1,29 @@
 body {
-    font-family: Arial;
-    padding-top: 50px;
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
 }
 
-footer {
-    margin-top: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-top: 1px solid #ededed;
-    color: #A9A9A9;
+p {
+    font-size: 16px;
+    color: black;
 }
 
-.icon-bar {
-    background-color: #fff;
+.margin {
+    margin-bottom: 45px;
 }
 
-.accountform {
-    padding-top: 20px;
+.bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.bubbles {
+    border: 1px solid black;
+    border-radius: 25px;
 }

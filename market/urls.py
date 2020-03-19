@@ -19,10 +19,11 @@ from cart import urls as urls_cart
 from products.views import all_products
 from django.views import static
 from .settings import MEDIA_ROOT
+from home.views import homepage
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', all_products, name='index'),
+    url(r'^$', homepage, name='index'),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
