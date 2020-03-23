@@ -18,7 +18,7 @@ def add_or_edit_product(request, pk=None):
     product = get_object_or_404(Product, pk=pk) if pk else None
     # this is for post (ignore for now)
     if request.method == "POST":
-        form = Product(request.POST, request.FILES, instance=product)
+        form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
             return render(request, "products.html", {"products": products})
@@ -26,4 +26,3 @@ def add_or_edit_product(request, pk=None):
     else:
         form = ProductForm(instance=product)
     return render(request, 'product_form.html', {'form': form})
-
