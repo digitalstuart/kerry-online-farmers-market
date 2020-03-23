@@ -22,7 +22,8 @@ def add_or_edit_product(request, pk=None):
         if form.is_valid():
             product = form.save()
             return render(request, "products.html", {"products": products})
-    # this is the get.  the instance=post is only important if we found a post earlier (for editing)
+    # this is the get.
+    # the instance=post is only important if we found a post earlier (for editing)
     else:
         form = ProductForm(instance=product)
     return render(request, 'product_form.html', {'form': form})

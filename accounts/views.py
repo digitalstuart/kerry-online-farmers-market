@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
 
-
 def index(request):
     """Return the index.html file"""
     return render(request, 'index.html')
@@ -20,7 +19,7 @@ def logout(request):
 def login(request):
     """Return a login page"""
     if request.user.is_authenticated:
-        return redirect(reverse('index'))
+        return redirect('new_product')
     if request.method == "POST":
         login_form = UserLoginForm(request.POST)
 
@@ -31,7 +30,7 @@ def login(request):
 
             if user:
                 auth.login(user=user, request=request)
-                return redirect(reverse('index'))
+                return redirect('new_product')
             else:
                 login_form.add_error(None, "Your username or password is incorrect")
     else:
