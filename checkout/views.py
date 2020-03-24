@@ -12,7 +12,7 @@ import stripe
 stripe.api_key = settings.STRIPE_SECRET
 
 
-@login_required()
+@login_required(login_url='https://8000-aedf2c80-1cb3-42c6-8d3f-608382663f80.ws-eu01.gitpod.io/accounts/buyer-login/')
 def checkout(request):
     if request.method == "POST":
         order_form = OrderForm(request.POST)
