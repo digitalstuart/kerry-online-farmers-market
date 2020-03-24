@@ -1,4 +1,6 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
 
 {% block content %}
 
@@ -6,13 +8,13 @@
 <div class="container-fluid bg-1 text-center">
 	<h3 class="margin">Kerry Online Farmers' Market</h3>
 	<div class="row">
-		<div class="col-4">
+		<div class="col-sm-4 col-12">
 			<div class="bubbles">About</div>
 		</div>
-		<div class="col-4">
+		<div class="col-sm-4 col-12">
 			<div class="bubbles"><a href="{% url 'products' %}">Buy</a></div>
 		</div>
-		<div class="col-4">
+		<div class="col-sm-4 col-12">
 			<div class="bubbles"><a href="{% url 'login' %}">Sell</a></div>
 		</div>
 	</div>	
