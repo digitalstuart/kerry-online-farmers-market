@@ -10,6 +10,7 @@ def all_products(request):
 def add_or_edit_product(request, pk=None):
     """
     Create a view that allows us to create
+
     or edit a post depending if the Post ID
     is null or not
     """
