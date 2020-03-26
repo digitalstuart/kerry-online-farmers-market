@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Product
 from .forms import ProductForm
+from django.views.generic import DeleteView
+from django.core.urlresolvers import reverse_lazy
 
 def all_products(request):
     products = Product.objects.all()
@@ -33,3 +35,9 @@ def add_or_edit_product(request, pk=None):
     else:
         form = ProductForm(instance=product)
     return render(request, 'product_form.html', {'form': form})
+
+class delete_product(DeleteView):
+    model = Product
+    template_name = 'products/product_delete.html'
+    context_object_name = 'product'
+    success_url = reverse_lazy('products')
