@@ -31,7 +31,20 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/"></a>
 				</li>
-				<li class="nav-item">
+                <li class="nav-item">
+					<a class="nav-link" href="">About</a>
+				</li>
+                <li class="nav-item">
+					<a class="nav-link" href="{% url 'products' %}">
+						<span class="nav-text">Buy</span>
+					</a>
+				</li>
+                <li class="nav-item">
+					<a class="nav-link" href="{% url 'login_seller' %}">
+						<span class="nav-text">Sell</span>
+					</a>
+				</li>
+                <li class="nav-item">
 					<form action="{% url 'search' %}" method="get">
 						<input type="text" name="q">
 						<button type="search">Search</button>
