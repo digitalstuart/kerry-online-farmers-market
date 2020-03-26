@@ -7,9 +7,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kerry Online Farmer's Market</title>
+	<title>Kerry Online Farmer's Market</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.12.0/css/all.css">
 	<link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
 	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -20,24 +21,40 @@
 </head>
 
 <body>
-	<h1>{% block page_heading %}{% endblock %}</h1>
-	<p>Test from base.html</p>
-	<div>
-		<a href="{% url 'view_cart' %}">
-			<i class="fa fa-shipping-cart"></i>Cart
-			{% if product_count > 0 %}
-			<label class="badge badge-warning">{{ product_count }}</label>
-			{% endif %}
-		</a>
-	</div>
-	<div class="container">
-		<div class="display">
-			<form action="{% url 'search' %}" method="get">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="/">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/"></a>
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'view_cart' %}">
+						<i class="fa fa-shipping-cart"></i>Cart
+						{% if product_count > 0 %}
+						<label class="badge badge-warning">{{ product_count }}</label>
+						{% endif %}
+					</a>
+				</li>
+                <li class="nav-item">
+					<form action="{% url 'search' %}" method="get">
 				<input type="text" name="q">
 				<button type="search">Search</button>
 			</form>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="mailto:stuartrichardsdigital@gmail.com"><i class="fas fa-envelope"></i>
+						<span class="nav-text">Contact</span>
+					</a>
+				</li>
+			</ul>
 		</div>
-	</div>
+	</nav>
+	<h1>{% block page_heading %}{% endblock %}</h1>
+	<p>Test from base.html</p>
 	{% block content %}{% endblock %}
 
 </body>
