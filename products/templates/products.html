@@ -11,7 +11,9 @@
 				<h3>{{ product.name }}</h3>
 				<p class="product-description">{{ product.description }}</p>
 				<p>{{ product.price }}</p>
+                {% if product.user == request.user %}
 				<a href="{% url 'edit_product' product.id %}" class="btn btn-default">Edit Product</a>
+                {% endif %}
 
 				<form method="post" action="{% url 'add_to_cart' product.id %}">
 					{% csrf_token %}
