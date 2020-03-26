@@ -32,6 +32,12 @@
 					<a class="nav-link" href="/"></a>
 				</li>
 				<li class="nav-item">
+					<form action="{% url 'search' %}" method="get">
+						<input type="text" name="q">
+						<button type="search">Search</button>
+					</form>
+				</li>
+				<li class="nav-item">
 					<a href="{% url 'view_cart' %}">
 						<i class="fa fa-shipping-cart"></i>Cart
 						{% if product_count > 0 %}
@@ -39,12 +45,7 @@
 						{% endif %}
 					</a>
 				</li>
-                <li class="nav-item">
-					<form action="{% url 'search' %}" method="get">
-				<input type="text" name="q">
-				<button type="search">Search</button>
-			</form>
-				</li>
+
 				<li class="nav-item">
 					<a class="nav-link" href="mailto:stuartrichardsdigital@gmail.com"><i class="fas fa-envelope"></i>
 						<span class="nav-text">Contact</span>
