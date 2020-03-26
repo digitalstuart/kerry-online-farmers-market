@@ -13,8 +13,10 @@ p {
 }
 
 .bg-1 { 
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
+    background: url("../../media/images/vegetables.jpg") no-repeat center center scroll;
+    background-size: cover;
+    height: 100vh;
+    color: black;
 }
 
 .container-fluid {
