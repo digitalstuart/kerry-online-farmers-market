@@ -3,6 +3,7 @@
 body {
     line-height: 1.8;
     color: white;
+    font-family: 'Spicy Rice', sans-serif;
 }
 
 p {
@@ -17,13 +18,17 @@ a, .nav-text, .navbar-brand {
     color: white
 }
 
-h1 {
-    font-family: 'Spicy Rice', sans-serif;
+h1 {    
+    font-size: 60px;
 }
 
 .margin {
-    margin-top: 45px;
+    margin-top: 90px;
     margin-bottom: 45px;
+}
+
+.about-buy-sell {
+    padding-top: 45px;
 }
 
 .bg-1 { 
@@ -34,7 +39,13 @@ h1 {
 
 .bubbles {
     border: 1px solid black;
-    border-radius: 25px;
+    border-radius: 100px;
+    font-size: 50px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #DECECB;
 }
 
 .icon-bar {
