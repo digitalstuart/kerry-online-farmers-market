@@ -14,7 +14,7 @@
                 {% if product.user == request.user %}
 				<a href="{% url 'edit_product' product.id %}" class="btn btn-default">Edit Product</a>
                 <a href="{% url 'delete_product' product.id %}" class="btn btn-default">Delete Product</a>
-                {% endif %}
+                {% endif %}       
 
 				<form method="post" action="{% url 'add_to_cart' product.id %}">
 					{% csrf_token %}

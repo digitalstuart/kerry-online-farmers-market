@@ -6,4 +6,11 @@
 
 {% block content %}
 <p>{{ profile.email }}</p>
+
+{% for products in user.products.all %}
+
+<p>{{ products.full_name }}</p>
+
+{% endfor %}
+
 {% endblock %}
