@@ -1,15 +1,18 @@
 body {
     line-height: 1.8;
-    color: black;
+    color: white;
 }
 
 p {
     font-size: 16px;
-    color: black;
 }
 
 .navbar {
     background-color: transparent;
+}
+
+a, .nav-text, .navbar-brand {
+    color: white
 }
 
 .margin {
@@ -20,7 +23,6 @@ p {
     background: url("../../media/images/vegetables.jpg") no-repeat center center scroll;
     background-size: cover;
     height: 100vh;
-    color: black;
 }
 
 .bubbles {
