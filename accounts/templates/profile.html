@@ -8,9 +8,11 @@
 <p>{{ profile.email }}</p>
 
 {% for products in user.products.all %}
+<p>Bought - {{ products.product.name }}</p>
+{% endfor %}
 
-<p>{{ products.product.name }}</p>
-
+{% for listings in user.listings.all %}
+<p>Sold - {{ listings }}</p>
 {% endfor %}
 
 {% endblock %}
