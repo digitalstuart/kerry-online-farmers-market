@@ -13,7 +13,7 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=40, blank=False)
     county = models.CharField(max_length=40, blank=False)
     date = models.DateField()
-    user = models.ForeignKey(User, related_name="products")
+    user = models.ForeignKey(User)
 
     def __str__(self):
         return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
@@ -23,6 +23,7 @@ class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, related_name='orders')
     product = models.ForeignKey(Product, null=False)
     quantity = models.IntegerField(blank=False)
+    user = models.ForeignKey(User, blank=False, related_name="products")
 
     def __str__(self):
         return "{0} {1} @ {2}".format(
