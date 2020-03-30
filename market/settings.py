@@ -31,7 +31,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-aedf2c80-1cb3-42c6-8d3f-608382663f80.ws-eu01.gitpod.io',
                  'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
+    'contact',
     'products',
     'cart',
     'home',
@@ -144,3 +144,5 @@ MEDIA_URL = '/media/'
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
