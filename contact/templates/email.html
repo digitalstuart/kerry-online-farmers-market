@@ -1,8 +1,14 @@
+{% extends 'second_base.html' %}
+{% load bootstrap_tags %}
+{% block content %}
+
 <h1>Contact Us</h1>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form | as_bootstrap }}
     <div class="form-actions">
       <button type="submit">Send</button>
     </div>
 </form>
+
+{% endblock %}
