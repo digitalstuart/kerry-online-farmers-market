@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-aedf2c80-1cb3-42c6-8d3f-608382663f80.ws-eu01.gitpod.io',
-                 'localhost']
+                 'localhost',
+                 'kerry-online-farmers-market.herokuapp.com']
 
 # Application definition
 
