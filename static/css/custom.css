@@ -14,8 +14,22 @@ p {
     background-color: transparent;
 }
 
+.nav-item:not(:first-child){
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+button {
+    font-size: 1rem;
+}
+
 a, .nav-text, .navbar-brand {
     color: white
+}
+
+.nav-cart {
+    position: relative;
+    top: 8px;
 }
 
 h1 {    
@@ -43,7 +57,7 @@ h1 {
     font-size: 50px;
 }
 
-a:hover {
+a:hover, .nav-text:hover {
     text-decoration: none;
     color: #DECECB;
 }
