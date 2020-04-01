@@ -14,13 +14,17 @@ p {
     background-color: transparent;
 }
 
-.nav-item:not(:first-child){
+.nav-item{
     padding-left: 8px;
     padding-right: 8px;
-}
+} 
 
 button {
     font-size: 1rem;
+}
+
+.search-box {
+    padding-top: 4px;
 }
 
 a, .nav-text, .navbar-brand {

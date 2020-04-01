@@ -43,12 +43,23 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<form action="{% url 'search' %}" method="get">
+					<form class="search-box" action="{% url 'search' %}" method="get">
 						<input type="text" name="q">
 						<button type="search">Search</button>
 					</form>
 				</li>
-				
+                {% if user.is_authenticated %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'profile' %}">
+							<span class="nav-text">Profile</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'logout' %}">
+							<span class="nav-text">Logout</span>
+						</a>
+					</li>
+				{% endif %}
 			</ul>
 		</div>
 	</nav>
