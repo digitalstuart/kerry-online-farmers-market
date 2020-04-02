@@ -1,7 +1,8 @@
 {% extends 'second_base.html' %}
 {% load bootstrap_tags %}
 {% block content %}
-<div class="container">
+<div class="container sections">
+<h1>Sell your product</h1>
 	<form method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		{{ form | as_bootstrap }}
