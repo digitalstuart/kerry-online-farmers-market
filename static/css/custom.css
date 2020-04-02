@@ -13,6 +13,10 @@ p {
     text-align: left;
 }
 
+.section-heading {
+    padding-top: 20px;
+}
+
 .navbar {
     background-color: transparent;
 }
