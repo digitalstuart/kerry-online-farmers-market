@@ -9,12 +9,13 @@
 				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
 				<h3>{{ product.name }}</h3>
-				<p class="product-description">{{ product.description }}</p>
-				<p class="product-price"> Price(€) - {{ product.price }}</p>
+				<p class="product-description"><strong>{{ product.description }}</strong></p>
+				<p class="product-price"><strong>€{{ product.price }}</strong></p>
                 {% if product.user == request.user %}
-				<a href="{% url 'edit_product' product.id %}" class="btn btn-default">Edit this product</a>
-                <a href="{% url 'delete_product' product.id %}" class="btn btn-default">Delete this product</a>
-                {% endif %}       
+				<a href="{% url 'edit_product' product.id %}" class="btn btn-default"><strong>Edit this product</strong></a>
+                <a href="{% url 'delete_product' product.id %}" class="btn btn-default"><strong>Delete this product</strong></a>
+                
+                {% endif %}      
 
 				<form method="post" action="{% url 'add_to_cart' product.id %}">
 					{% csrf_token %}
@@ -25,6 +26,7 @@
                         </span>
 					</div>
 				</form>
+                <hr class="block-divider">
 			</div>
 		</div>
 		{% endfor %}
