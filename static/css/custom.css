@@ -50,14 +50,12 @@ h1 {
 }
 
 .bg-1 { 
-    background: url("../../media/images/vegetables.jpg") no-repeat center center scroll;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../media/images/vegetables.jpg") no-repeat center center scroll;
     background-size: cover;
     height: 100vh;
 }
 
-.bubbles {
-    border: 1px solid black;
-    border-radius: 100px;
+.bubbles {    
     font-size: 50px;
 }
 
