@@ -10,10 +10,10 @@
 
 				<h3>{{ product.name }}</h3>
 				<p class="product-description">{{ product.description }}</p>
-				<p>{{ product.price }}</p>
+				<p class="product-price"> Price(€) - {{ product.price }}</p>
                 {% if product.user == request.user %}
-				<a href="{% url 'edit_product' product.id %}" class="btn btn-default">Edit Product</a>
-                <a href="{% url 'delete_product' product.id %}" class="btn btn-default">Delete Product</a>
+				<a href="{% url 'edit_product' product.id %}" class="btn btn-default">Edit this product</a>
+                <a href="{% url 'delete_product' product.id %}" class="btn btn-default">Delete this product</a>
                 {% endif %}       
 
 				<form method="post" action="{% url 'add_to_cart' product.id %}">

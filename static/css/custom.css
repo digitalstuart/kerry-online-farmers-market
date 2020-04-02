@@ -2,8 +2,7 @@
 
 body {
     line-height: 1.8;
-    color: white;
-    font-family: 'Spicy Rice', sans-serif;
+    color: white;    
 }
 
 p {
@@ -12,6 +11,10 @@ p {
 
 .navbar {
     background-color: transparent;
+}
+
+.navbar, .about-buy-sell, h1 {
+    font-family: 'Spicy Rice', sans-serif;
 }
 
 .nav-item{
@@ -50,16 +53,15 @@ h1 {
 }
 
 .bg-1 { 
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../media/images/vegetables.jpg") no-repeat center center scroll;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../media/images/vegetables.jpg") no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
 }
 
 .bubbles {    
     font-size: 50px;
 }
 
-a:hover, .nav-text:hover {
+a:hover, .nav-text:hover, .btn:hover {
     text-decoration: none;
     color: #DECECB;
 }
@@ -104,6 +106,12 @@ caption p {
     margin-top: 30px;
 }
 
+/* PRODUCTS PAGE */
+
+.btn {
+    color: white;
+}
+
 .panel-default {
     border-color: transparent;
     padding: 0 10px;
@@ -111,9 +119,15 @@ caption p {
 
 .panel-body {
     height: 100%;
-    border: 1px solid #ddd;
 }
 
 .product-description {
     min-height: 40px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.product-price {
+    margin-bottom: 8px;
+    text-align: left;
 }
