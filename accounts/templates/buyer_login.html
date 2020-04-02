@@ -2,9 +2,10 @@
 {% load bootstrap_tags %}
 
 {% block page_title %}Login Page{% endblock %}
-{% block page_heading %}Please log in to buy{% endblock %} {% block content %}
+{% block content %}
 
 <div class="container sections">
+<h1 class="section-heading">Please log in to buy</h1>
 	<form method="POST" action="{% url 'login_buyer' %}?next={{ next }}" class="accountform">
 		<fieldset class="form-group">
 			<legend>Buyer Login</legend>
