@@ -58,7 +58,7 @@ def login_buyer(request):
         login_form = UserLoginForm()
     return render(request, 'buyer_login.html', {'login_form': login_form})
 
-def registration_buyer(request):
+def registration(request):
     """Render the registration page"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
@@ -78,30 +78,7 @@ def registration_buyer(request):
                 messages.error(request, "Unable to register your account at this time")
     else:
         registration_form = UserRegistrationForm()
-    return render(request, 'buyer_registration.html', {
-        "registration_form": registration_form})
-
-def registration_seller(request):
-    """Render the registration page"""
-    if request.user.is_authenticated:
-        return redirect(reverse('index'))
-
-    if request.method == "POST":
-        registration_form = UserRegistrationForm(request.POST)
-
-        if registration_form.is_valid():
-            registration_form.save()
-
-            user = auth.authenticate(username=request.POST['username'],
-                                     password=request.POST['password1'])
-            if user:
-                auth.login(user=user, request=request)
-                messages.success(request, "You have successfully registered and have been automatically logged in")
-            else:
-                messages.error(request, "Unable to register your account at this time")
-    else:
-        registration_form = UserRegistrationForm()
-    return render(request, 'seller_registration.html', {
+    return render(request, 'registration.html', {
         "registration_form": registration_form})
 
 def user_profile(request):

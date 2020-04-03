@@ -1,9 +1,7 @@
 {% extends 'second_base.html' %}
 {% load bootstrap_tags %}
 
-{% block page_title %}Registration Page{% endblock %}
 
-{% block page_heading %}User Registration{% endblock %}
 
 {% block content %}
 <div class="container sections">
@@ -13,13 +11,12 @@
     </div>
     {% endif %}
 <div>
-	<p>If you already have an account, you can <a href="{% url 'login_buyer' %}">sign in</a></p>
 	<form method="POST" class="accountform">
 		<fieldset class="form-group">
-			<legend>Create a new buyer account</legend>
+			<legend>Create a new account</legend>
 			{% csrf_token %}
 			{{  registration_form | as_bootstrap }}
-			<button type="submit" class="btn btn-primary">Buyer Register</button>
+			<button type="submit" class="btn btn-primary">Register</button>
 		</fieldset>
 	</form>
 </div>
