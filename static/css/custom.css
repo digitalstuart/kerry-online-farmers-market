@@ -21,7 +21,7 @@ p {
     background-color: transparent;
 }
 
-.navbar, .about-buy-sell, h1, .logout-message {
+.navbar, .about-buy-sell, h1, .logout-message, .login-message, .registration-message {
     font-family: 'Spicy Rice', sans-serif;
 }
 

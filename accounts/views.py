@@ -73,7 +73,7 @@ def registration_buyer(request):
                                      password=request.POST['password1'])
             if user:
                 auth.login(user=user, request=request)
-                messages.success(request, "You have successfully registered")
+                messages.success(request, "You have successfully registered and have been automatically logged in")
             else:
                 messages.error(request, "Unable to register your account at this time")
     else:
@@ -96,7 +96,7 @@ def registration_seller(request):
                                      password=request.POST['password1'])
             if user:
                 auth.login(user=user, request=request)
-                messages.success(request, "You have successfully registered")
+                messages.success(request, "You have successfully registered and have been automatically logged in")
             else:
                 messages.error(request, "Unable to register your account at this time")
     else:

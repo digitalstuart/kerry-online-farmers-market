@@ -7,6 +7,12 @@
 
 {% block content %}
 <div class="container sections">
+{% if messages %}
+    <div class="registration-message">
+        {% for message in messages %} {{ message }} {% endfor %}
+    </div>
+    {% endif %}
+<div>
 	<p>If you already have an account, you can <a href="{% url 'login_buyer' %}">sign in</a></p>
 	<form method="POST" class="accountform">
 		<fieldset class="form-group">

@@ -2,7 +2,13 @@
 {% load bootstrap_tags %}
 {% block content %}
 <div class="container sections">
-<h1 class="section-heading">Sell your product</h1>
+{% if messages %}
+    <div class="login-message text-center">
+        {% for message in messages %} {{ message }} {% endfor %}
+    </div>
+    {% endif %}
+<div>
+	<h1 class="section-heading">Sell your product</h1>
 	<form method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		{{ form | as_bootstrap }}
