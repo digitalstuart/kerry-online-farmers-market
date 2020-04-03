@@ -25,10 +25,12 @@ from django.views import static
 from .settings import MEDIA_ROOT
 from home.views import homepage
 from accounts import urls as urls_accounts
+from accounts.views import logout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', homepage, name='index'),
+    url(r'^accounts/logout/$', logout, name="logout"),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
     url(r'^search/', include(urls_search)),

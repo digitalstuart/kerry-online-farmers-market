@@ -3,6 +3,11 @@
 {% load bootstrap_tags %}
 
 {% block content %}
+{% if messages %}
+    <div class="logout-message">
+        {% for message in messages %} {{ message }} {% endfor %}
+    </div>
+    {% endif %}
 <div>
 	<h1 class="margin">Kerry Online Farmers' Market</h3>
 	<div class="row about-buy-sell">
