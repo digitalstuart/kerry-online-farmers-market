@@ -1,6 +1,11 @@
 {% extends 'second_base.html' %}
 
 {% block content %}
+{% if messages %}
+<div class="text-center">
+	{% for message in messages %} {{ message }} {% endfor %}
+</div>
+{% endif %}
 <div class="container">
 	<div class="row row-flex">
 		{% for product in products %}
@@ -11,11 +16,13 @@
 				<h3>{{ product.name }}</h3>
 				<p class="product-description"><strong>{{ product.description }}</strong></p>
 				<p class="product-price"><strong>€{{ product.price }}</strong></p>
-                {% if product.user == request.user %}
-				<a href="{% url 'edit_product' product.id %}" class="btn btn-default"><strong>Edit this product</strong></a>
-                <a href="{% url 'delete_product' product.id %}" class="btn btn-default"><strong>Delete this product</strong></a>
-                
-                {% endif %}      
+				{% if product.user == request.user %}
+				<a href="{% url 'edit_product' product.id %}"
+					class="btn btn-default"><strong>Edit this product</strong></a>
+				<a href="{% url 'delete_product' product.id %}"
+					class="btn btn-default"><strong>Delete this product</strong></a>
+
+				{% endif %}
 
 				<form method="post" action="{% url 'add_to_cart' product.id %}">
 					{% csrf_token %}
@@ -26,7 +33,7 @@
                         </span>
 					</div>
 				</form>
-                <hr class="block-divider">
+				<hr class="block-divider">
 			</div>
 		</div>
 		{% endfor %}
