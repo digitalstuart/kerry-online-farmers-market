@@ -1,14 +1,12 @@
 {% extends 'second_base.html' %}
 {% load bootstrap_tags %}
 
-{% block page_title %}Login Page{% endblock %}
 {% block content %}
 
 <div class="container sections">
 <h1 class="section-heading">Please log in to sell</h1>
 	<form method="POST" action="{% url 'login_seller' %}?next={{ next }}" class="accountform">
 		<fieldset class="form-group">
-			<legend>Seller Login</legend>
 			{% csrf_token %} {{ login_form | as_bootstrap }}
 			<p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
 			<button type="submit" class="btn btn-primary">Login</button>
