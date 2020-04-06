@@ -2,7 +2,10 @@
 
 body {
     line-height: 1.8;
-    color: white;    
+    color: white;   
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../media/images/vegetables.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
 p {
@@ -59,12 +62,6 @@ h1 {
 
 .about-buy-sell {
     padding-top: 45px;
-}
-
-.bg-1 { 
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../media/images/vegetables.jpg") repeat-y center center scroll;
-    background-size: cover;
-    height: 100vh;
 }
 
 .bubbles {    
