@@ -14,7 +14,7 @@
 				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
 				<h3>{{ product.name }}</h3>
-				<p class="product-description"><strong>{{ product.description }}</strong></p>
+                <p class="product-description"><strong>{{ product.description }}</strong></p>
 				<p class="product-price"><strong>€{{ product.price }}</strong></p>
 				{% if product.user == request.user %}
 				<a href="{% url 'edit_product' product.id %}"

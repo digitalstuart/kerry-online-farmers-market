@@ -1,19 +1,25 @@
 {% extends 'second_base.html' %}
 
-{% block page_title %}{{ user }}'s Profile{% endblock %}
-
-{% block page_heading %}{{ user }}'s Profile{% endblock %}
-
 {% block content %}
-<div class="container sections">
-	<p>{{ profile.email }}</p>
+<div class="container sections text-center">
+	<h1 class="section-heading">{{ user }}'s profile</h1>
+	<p>Your registered email address is {{ profile.email }}</p>
+    <hr class="block-divider">
+	<h1>Products you've bought</h1>
+    <p>Use the 'Search' box to buy products again</p>
+	<div class="row row-flex">
 
-	{% for products in user.products.all %}
-	<p>Bought - {{ products.product.name }}</p>
-	{% endfor %}
-
-	{% for listings in user.listings.all %}
-	<p>Sold - {{ listings }}</p>
-	{% endfor %}
+		{% for products in user.products.all %}
+		<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3 display panel panel-default">
+			<div class="panel-body">
+				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ products.product.image }}')"></div>
+				<h3>{{ products.product.name }}</h3>
+				<p><strong>€{{ products.product.price }}</strong></p>
+			</div>
+		</div>
+        
+        
+		{% endfor %}
+	</div>
 </div>
 {% endblock %}
