@@ -5,6 +5,7 @@
 {% block content %}
 <div class="container">
 	<div class="row row-flex">
+    {% if cart_items %}
 		{% for item in cart_items %}
 
 		<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
@@ -33,8 +34,12 @@
 			</div>
 		</div>
 		{% endfor %}
+        {% else %}
+        <p>Your cart is empty, you can shop for items <a href="{% url 'products' %}">here</a></p>
+        {% endif %}
 	</div>
 </div>
+{% if cart_items %}
 <div class="container">
 	<div class="row">
 		<p>Total</p>
@@ -43,5 +48,6 @@
 			role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 	</div>
 </div>
+{% endif %}
 
 {% endblock %}
