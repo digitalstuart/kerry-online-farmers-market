@@ -83,6 +83,7 @@ a:hover, .nav-text:hover, .btn:hover {
 
 .accountform, .contactform {
     padding-top: 20px;
+    padding-bottom: 12px;
 }
 
 .badge {
