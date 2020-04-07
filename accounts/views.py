@@ -51,7 +51,7 @@ def login_buyer(request):
 
             if user:
                 auth.login(user=user, request=request)
-                return redirect('checkout')
+                return redirect('products')
             else:
                 login_form.add_error(None, "Your username or password is incorrect")
     else:
