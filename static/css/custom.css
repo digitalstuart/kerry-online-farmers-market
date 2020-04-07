@@ -24,6 +24,10 @@ p {
     background-color: transparent;
 }
 
+.search-box {
+    padding-right: 8px;
+}
+
 .fa-bars {
     color: white;
 }
@@ -37,10 +41,10 @@ p {
     font-family: 'Spicy Rice', sans-serif;
 }
 
-.nav-item{
+.nav-item {
     padding-left: 8px;
     padding-right: 8px;
-} 
+}
 
 button {
     font-size: 1rem;
@@ -48,11 +52,6 @@ button {
 
 a, .nav-text, .navbar-brand {
     color: white
-}
-
-.nav-cart {
-    position: relative;
-    top: 8px;
 }
 
 h1 {    
@@ -163,16 +162,8 @@ h1 {
     font-size: 40px;
 }
 
-}
-
-@media only screen and (max-width: 425px) {
-
-h1 {
-    font-size: 40px;
-}
-
-.bubbles {
-    font-size: 30px;
+.navbar-collapse {
+    padding-top: 10px;
 }
 
 .navbar-brand {
@@ -187,9 +178,20 @@ h1 {
     padding: 0;
 }
 
-.nav-cart {
-    position: relative;
-    top: 0;
+.search-box {
+    padding-right: 0;
+}
+
+}
+
+@media only screen and (max-width: 425px) {
+
+h1 {
+    font-size: 40px;
+}
+
+.bubbles {
+    font-size: 30px;
 }
 
 }
