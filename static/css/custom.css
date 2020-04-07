@@ -131,6 +131,7 @@ caption p {
 .panel-body {
     height: 100%;
     width: 80%;
+    margin: auto;    
 }
 
 .product-description {
@@ -180,6 +181,10 @@ h1 {
 
 .search-box {
     padding-right: 0;
+}
+
+.panel-body {
+    width: 100%;
 }
 
 }
