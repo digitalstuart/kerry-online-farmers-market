@@ -81,7 +81,7 @@ a:hover, .nav-text:hover, .btn:hover {
     background-color: #fff;
 }
 
-.accountform {
+.accountform, .contactform {
     padding-top: 20px;
 }
 
@@ -114,7 +114,7 @@ caption p {
 .row.row-flex {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 /* PRODUCTS PAGE */

@@ -12,9 +12,9 @@
     </div>
     {% endif %}
 <div>
+<h1 class="section-heading">Create new account</h1>
 	<form method="POST" class="accountform">
 		<fieldset class="form-group">
-			<legend>Create a new account</legend>
 			{% csrf_token %}
 			{{  registration_form | as_bootstrap }}
 			<button type="submit" class="btn btn-primary">Register</button>

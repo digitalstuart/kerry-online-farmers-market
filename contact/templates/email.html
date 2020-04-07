@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container sections">
 	<h1 class="section-heading">Get in touch</h1>
-	<form method="post">
+	<form method="post" class="contactform">
 		{% csrf_token %}
 		{{ form | as_bootstrap }}
 		<div class="form-actions">
