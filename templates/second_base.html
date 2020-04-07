@@ -23,6 +23,10 @@
 	
 		<nav class="navbar navbar-expand-md">
 			<a class="navbar-brand" href="/">Home</a>
+            <form class="search-box" action="{% url 'search' %}" method="get">
+							<input type="text" name="q">
+							<button type="search">Find</button>
+						</form>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="fas fa-bars"></i></span>
         </button>
@@ -57,12 +61,6 @@
 							<span class="nav-text">Contact</span>
 						</a>
 
-					</li>
-					<li class="nav-item">
-						<form class="search-box" action="{% url 'search' %}" method="get">
-							<input type="text" name="q">
-							<button type="search">Search</button>
-						</form>
 					</li>
 					{% if user.is_authenticated %}
 					<li class="nav-item">
