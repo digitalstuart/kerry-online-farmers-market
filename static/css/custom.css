@@ -24,6 +24,15 @@ p {
     background-color: transparent;
 }
 
+.fa-bars {
+    color: white;
+}
+
+.navbar-toggler {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .navbar, .about-buy-sell, h1 {
     font-family: 'Spicy Rice', sans-serif;
 }
