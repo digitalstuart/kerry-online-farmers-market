@@ -81,7 +81,7 @@ a:hover, .nav-text:hover, .btn:hover {
     background-color: #fff;
 }
 
-.accountform, .contactform, .sellform {
+.accountform, .contactform, .sellform, .deleteform {
     padding-top: 20px;
     padding-bottom: 12px;
 }

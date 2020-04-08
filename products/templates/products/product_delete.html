@@ -1,9 +1,10 @@
 {% extends 'second_base.html' %}
 
 {% block content %}
-    <form action="" method="POST">
+    <form action="" method="POST" class="deleteform">
         {% csrf_token %}
-        <p>Are you sure you want to delete "{{ product.name }}"?</p>
-        <input type="submit" value="Delete">
+        <p>Hello {{ user }} - are you sure you wish to delete your product "{{ product.name }}"?</p>
+        <p>Please confirm with the button below, or you can <a href="{% url 'products' %}">return to the Products page</a></p>
+        <button type="submit" class="btn btn-primary">Delete</button>
     </form>
 {% endblock %}
