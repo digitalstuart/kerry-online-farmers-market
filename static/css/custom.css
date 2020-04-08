@@ -178,6 +178,10 @@ caption p {
     padding-bottom: 16px;
 }
 
+.password-pages {
+    padding-top: 20px;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 768px) {
