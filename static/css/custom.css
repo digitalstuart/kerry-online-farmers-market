@@ -159,7 +159,8 @@ caption p {
 }
 
 .checkout-container {
-    margin-top: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .checkout-row {
@@ -217,6 +218,11 @@ h1 {
 
 .bubbles {
     font-size: 30px;
+}
+
+.amend-button {
+    position: relative;
+    bottom: 8px;
 }
 
 }
