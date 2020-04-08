@@ -10,7 +10,7 @@
 <div class="container text-center">
     <h1 class="section-heading">Browse products</h1>
 	<div class="row row-flex">
-        
+        {% if products %}
 		{% for product in products %}
 		<div class="col-sm-6 col-md-4 display panel panel-default">
 			<div class="panel-body">
@@ -40,6 +40,9 @@
 			</div>
 		</div>
 		{% endfor %}
+        {% else %}
+        <p>Sorry, there are no products to display at the moment!</p>
+        {% endif %}
 	</div>
 </div>
 {% endblock %}
