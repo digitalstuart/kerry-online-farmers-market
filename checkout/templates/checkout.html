@@ -13,7 +13,9 @@
 {% endblock %}
 
 {% block content %}
+<h1 class="section-heading">Checkout</h1>
 <div class="container sections">
+    
 	{% if messages %}
 	<div class="text-center">
 		{% for message in messages %} {{ message }} {% endfor %}
@@ -31,41 +33,39 @@
 						<p>Number of items - {{ item.quantity }}</p>
 						<p>Cost per item - €{{ item.product.price }}</p>
 					</div>
-                    <hr class="block-divider">
+					<hr class="block-divider">
 				</div>
-                
+
 			</div>
 			{% endfor %}
 		</div>
-        <div class="row">
-			<h3>Total cost - €{{ total }}<hr class="block-divider"></h3>
-            
+
+		<div class="container">
+			<form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+				
+                <h3>Total - €{{ total }}</h3>
+				<legend>Payment Details</legend>
+
+				<div id="credit-card-errors" style="display: none;">
+					<div id="alert-message block-message error" id="stripe-error-message"></div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-6">
+						{{ order_form | as_bootstrap }}
+					</div>
+
+					<div class="form-group col-md-6">
+						{{ payment_form | as_bootstrap }}
+					</div>
+				</div>
+
+				{% csrf_token %}
+				<div class="form-group col-md-12">
+					<input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+                </div>
+			</form>
 		</div>
-        
+
+
 	</div>
-	
-	<div class="container">
-		<form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
-			<h3 class="checkout-payment">Payment Details</h3>
-
-			<div id="credit-card-errors" style="display: none;">
-				<div id="alert-message block-message error" id="stripe-error-message"></div>
-			</div>
-            <div class="row">
-			<div class="form-group col-md-6">
-				{{ order_form | as_bootstrap }}
-			</div>
-
-			<div class="form-group col-md-6">
-				{{ payment_form | as_bootstrap }}
-			</div>
-            </div>
-
-			{% csrf_token %}
-			<div class="form-group col-md-12">
-				<input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
-            </div>
-		</form>
-	</div>
-</div>
-{% endblock %}
+	{% endblock %}
