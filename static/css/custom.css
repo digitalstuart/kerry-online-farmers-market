@@ -152,6 +152,25 @@ caption p {
     background-color: white;
 }
 
+/* CART PAGE */
+
+.amend-button, .amend-form, .amend-number, .checkout-button {
+    margin-left: 5px;
+}
+
+.checkout-container {
+    margin-top: 25px;
+}
+
+.checkout-row {
+    padding-left: 10px;
+}
+
+.quantity, .amend-number, .cart-cost {
+    position: relative;
+    top: 5px;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 768px) {
