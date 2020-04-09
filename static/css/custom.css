@@ -240,6 +240,16 @@ h1 {
     width: 100%;
 }
 
+}
+
+@media only screen and (min-width: 768px) {
+
+.method-heading {
+    margin-top: 16px;
+}
+
+}
+
 @media only screen and (max-width: 425px) {
 
 h1 {
@@ -253,6 +263,10 @@ h1 {
 .amend-button {
     position: relative;
     bottom: 8px;
+}
+
+.ingredients-heading {
+    margin-top: 16px;
 }
 
 }

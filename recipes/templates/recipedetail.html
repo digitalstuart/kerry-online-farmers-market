@@ -12,14 +12,21 @@
 				<div class="col-md-6 ingredients-method">
 
 
-					<h3>Ingredients</h3>
-                    <p>{{ recipe.ingredients | linebreaks }}</p>
-					<h3>Method</h3>
-                    <p>{{ recipe.method | linebreaks }}</p>
+					<h3 class="ingredients-heading">Ingredients</h3>
+					<p><strong>{{ recipe.ingredients | linebreaks }}</strong></p>
 
 				</div>
-			
+			</div>
+
+			<div class="row">
+				<div class="col ingredients-method">
+					<h3 class="method-heading">Method</h3>
+					<p><strong>{{ recipe.method | linebreaks }}</strong></p>
+
+				</div>
+			</div>
+
 		</div>
 	</div>
-</div>
-{% endblock %}
+
+	{% endblock %}
