@@ -1,0 +1,21 @@
+{% extends 'second_base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-2 col-sm-3 text-center">
+            
+        </div>
+        <div class="col-sm-10 col-md-9">
+            
+                <img src="/media/{{ recipe.image }}">
+            
+            <h3>{{ recipe.title }}</h3>
+            <div class="row">
+                <div class="col-xs-9">
+                    <p>{{ recipe.ingredients }}</p>
+                    <p>{{ recipe.method }}</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

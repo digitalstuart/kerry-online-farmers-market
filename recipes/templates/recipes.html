@@ -7,10 +7,17 @@
     <p>You can add your own recipe to the list by using the form <a href="{% url 'add_recipe' %}">here</a>.</p>
 	<div class="row row-flex">
 		{% for recipe in recipes %}
-		<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+		<div class="col-sm-6 col-md-4 display panel panel-default">
 			<div class="panel-body">
+
+            <a href="{% url 'recipe_detail' recipe.id %}">
+            
+            <h3>{{ recipe.name }}</h3>
+				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ recipe.image }}')"></div>
+            </a>
+            
+
 				
-				<h3>{{ recipe.method }}</h3>
 				
                 
 				

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Recipe
 from .forms import RecipeForm
 
@@ -16,3 +16,15 @@ def add_recipe(request):
     else:
         form = RecipeForm
     return render(request, "recipes_form.html", {"form": form})
+
+def recipe_detail(request, pk):
+    """
+    Create a view that returns a single
+    Post object based on the post ID (pk) and
+    render it to the 'postdetail.html' template.
+    Or return a 404 error if the post is
+    not found
+    """
+    recipe = get_object_or_404(Recipe, pk=pk)
+    recipe.save()
+    return render(request, "recipedetail.html", {'recipe': recipe})
