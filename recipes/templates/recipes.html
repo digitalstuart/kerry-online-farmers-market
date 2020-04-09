@@ -3,15 +3,12 @@
 {% block content %}
 <div class="container">
 	<div class="row row-flex">
-		{% for seller in sellers %}
+		{% for recipe in recipes %}
 		<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
 			<div class="panel-body">
 				
-				<h3>{{ seller.name }}</h3>
-				<p>{{ seller.items }}</p>
-				<p>{{ seller.address }}</p>
-                <p>{{ seller.phone }}</p>
-				<p>{{ seller.email }}</p>
+				<h3>{{ recipe.method }}</h3>
+				
                 
 				
 			</div>
