@@ -3,18 +3,19 @@
 {% block content %}
 <div class="container text-center">
     <h1 class="section-heading">Recipes</h1>
-    <p>These recipes all include ingredients bought from Kerry Online Farmers' Market.</p> 
+    <p>These recipes include ingredients from Kerry Online Farmers' Market.</p> 
     <p>You can add your own recipe to the list by using the form <a href="{% url 'add_recipe' %}">here</a>.</p>
 	<div class="row row-flex">
 		{% for recipe in recipes %}
 		<div class="col-sm-6 col-md-4 display panel panel-default">
 			<div class="panel-body">
 
-            <a href="{% url 'recipe_detail' recipe.id %}">
             
-            <h3>{{ recipe.name }}</h3>
+            
+            <h3><a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.name }}</a></h3>
 				<div class="recipe" style="background-image: url('{{ MEDIA_URL }}{{ recipe.image }}')"></div>
-            </a>
+                <hr class="block-divider">
+        
             
 
 				
