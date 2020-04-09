@@ -99,13 +99,35 @@ a:hover, .nav-text:hover, .btn:hover {
     background-color: #c67605;
 }
 
-.product {
+.product, .recipe {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     width: 150px;
     height: 150px;
     margin: 0 auto;
+}
+
+.recipe-main {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.recipe-details {
+    margin-top: 20px;
+}
+
+.ingredients-method {
+    text-align: left;
 }
 
 caption p {

@@ -1,21 +1,25 @@
 {% extends 'second_base.html' %}
 {% block content %}
-    <div class="row">
-        <div class="col-md-2 col-sm-3 text-center">
-            
-        </div>
-        <div class="col-sm-10 col-md-9">
-            
-                <img src="/media/{{ recipe.image }}">
-            
-            <h3>{{ recipe.title }}</h3>
-            <div class="row">
-                <div class="col-xs-9">
+<div class="row">
+
+	<div class="col">
+		<h1 class="section-heading">{{ recipe.name }}</h1>
+
+		<div class="row recipe-details">
+			<div class="col-md-6">
+				<img class="responsive" src="{{ MEDIA_URL }}{{ recipe.image }}" alt="">
+			</div>
+				<div class="col-md-6 ingredients-method">
+
+
+					<h3>Ingredients</h3>
                     <p>{{ recipe.ingredients }}</p>
+					<h3>Method</h3>
                     <p>{{ recipe.method }}</p>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+
+				</div>
+			
+		</div>
+	</div>
+</div>
 {% endblock %}
