@@ -5,3 +5,4 @@ class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = ('name', 'ingredients', 'method')
+        labels = {'name':'Name of recipe'}

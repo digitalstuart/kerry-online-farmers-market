@@ -4,7 +4,7 @@
 <div class="container sections">
 	
 		<h1 class="section-heading">Add your recipe</h1>
-	<form class="recipeform" method="POST" enctype="multipart/form-data">
+        	<form class="recipeform" method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		{{ form | as_bootstrap }}
 		<button type="submit" class="btn btn-info">Save</button>
