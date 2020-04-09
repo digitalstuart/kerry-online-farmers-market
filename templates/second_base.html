@@ -68,7 +68,11 @@
 						<a class="nav-link" href="{% url 'email' %}">
 							<span class="nav-text">Contact</span>
 						</a>
-
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="{% url 'recipes' %}">
+							<span class="nav-text">Recipes</span>
+						</a>
 					</li>
 					{% if user.is_authenticated %}
 					<li class="nav-item">
@@ -88,11 +92,7 @@
 						</a>
 					</li>					
 					{% endif %}
-                    <li class="nav-item">
-						<a class="nav-link" href="{% url 'recipes' %}">
-							<span class="nav-text">Recipes</span>
-						</a>
-					</li>
+                    
 				</ul>
 			</div>
 		</nav>
