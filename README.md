@@ -41,9 +41,11 @@ The process of selecting and purchasing a product should be achievable with just
 
 ![alt text](https://i.imgur.com/R1JfR33.jpg "Kerry Online Farmers Market screenshot")
 
-I used Balsamiq to create some wireframes for the project. 
+I used Balsamiq to create some wireframes for the project. They illustrate that the idea was clear from the outset and the development and final product have been consistent with the concept. 
 
-SCREENSHOTS HERE
+![alt text](https://i.imgur.com/eCov7t5.jpg "Kerry Online Farmers Market wireframe")
+![alt text](https://i.imgur.com/gy4vgmn.jpg "Kerry Online Farmers Market wireframe")
+![alt text](https://i.imgur.com/RChkHvP.jpg "Kerry Online Farmers Market wireframe")
 
 ## Features
 
