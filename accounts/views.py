@@ -74,8 +74,8 @@ def registration(request):
             if user:
                 auth.login(user=user, request=request)
                 messages.success(request, "You have successfully registered and have been automatically logged in")
-            else:
-                messages.error(request, "Unable to register your account at this time")
+        else:
+            messages.error(request, "Sorry, we were unable to register your account at this time, please check for error messages below")
     else:
         registration_form = UserRegistrationForm()
     return render(request, 'registration.html', {
