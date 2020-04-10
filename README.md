@@ -24,9 +24,9 @@ Interaction with the site is clearly mapped through prompts and messages, which 
 
 The process of selecting and purchasing a product should be achievable with just the following the steps:
 * User logs in and is greeted with a 'login success' message.
-* User finds desired product, selects amount and clicks 'Add'. 
-* Item(s) added to cart; user clicks on 'Cart' menu item.
-* User can amend number of selected products and/or click 'Checkout' button.
+* User finds desired product, selects amount and clicks **'Add'**. 
+* Item(s) added to cart; user clicks on **'Cart'** menu item.
+* User can amend number of selected products and/or click **'Checkout'** button.
 * User completes personal and payment details form, clicks submit and then sees a 'purchase success' message.
 
 ### User Stories
@@ -48,6 +48,24 @@ SCREENSHOTS HERE
 ## Features
 
 ### Existing features
+
+* The site has a responsive collapsible navbar, with a burger menu and dropdown items displayed for smaller devices.
+* There is a **'Find'** search box available on the navbar.
+* The **'Register'** option links to a user registration form, where an email address, username and password are required to register with the site.
+* The **'Login to buy'** link redirects users straight to the **'Browse products'** page once they have successfully logged in.
+* The **'Login to sell'** link redirects users straight to the **'Sell your product'** page once they have successfully logged in.
+* Once a user is logged, the **'Login to buy'** and **'Login to sell'** links are replaced with simply **'Buy'** and **'Sell'**. The **'Cart'** link also becomes available on the navbar, while **'Register'** is no longer shown but **'Profile'** and **'Logout'** are.
+* There is a form for listing products for sale. Once completed and saved, the item then becomes available on the **'Browse products'** page.
+* Each product listing includes a name, image, description and price. Users can select the quantity of any item and add to their cart.
+* Product listings can be edited or deleted via links displayed on the **'Browse products'** page, however these are only visible to the logged-in user who originally created the items.
+* The **'Cart'** navbar link automatically updates with a 'number badge' whenever items are added.
+* The shopping cart page has options to amend the quantity of items for purchase, as well as a **'Checkout'** button.
+* The **'Checkout'** page itself displays the items being bought, the total cost and a simple form for personal and payment details. NB: this currently only works with the Stripe testing default of card number '4242424242424242' and security code '111'.
+* A logged-in user's **'Profile'** page shows their username, registered email address and the items they have previously purchased.
+* There is a **'Contact'** page where anyone can send a message to the site; this uses the Gmail SMTP server.
+* The **'Recipes'** section displays a name and image linking to individual recipe pages, which contain the relevant ingredients and cooking method. There is also a link to a form for posting a new recipe on the site.
+* The login pages include a link to password reset functionality, which is an email system using the Gmail SMTP server.
+* All the processes for registration, logging in/out, using the contact form, password reset and making a purchase are followed by 'success' messages displayed to the user.
 
 ### Features left to implement
 
