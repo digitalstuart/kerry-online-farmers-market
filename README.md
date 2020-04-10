@@ -72,7 +72,6 @@ I also ran my code through the W3C validator tools for HTML/CSS, as well as JSHi
 * I created a new app in Heroku called *kerry-online-farmers-market* with the region selected as 'Europe'.
 LOTS MORE TO COME IN HERE!
 * I then clicked 'Open app' and my website was deployed live to https://kerry-online-farmers-market.herokuapp.com.
-* In order to clone this project, you should paste https://github.com/digitalstuart/kerry-online-farmers-market.git into your chosen editor's terminal. Then type *git remote rm origin* into the terminal to sever the link with the original.
 
 ## Credits
 
