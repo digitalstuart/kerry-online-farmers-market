@@ -6,5 +6,5 @@ class ContactForm(forms.ModelForm):
 
     class Meta:
         model = Contact
-        fields = '__all__'
+        fields = ('your_name', 'subject', 'message')
         labels = {'message':'Message (please include your contact email address)'}
