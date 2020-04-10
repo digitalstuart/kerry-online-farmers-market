@@ -71,6 +71,8 @@ SCREENSHOTS HERE
 
 ## Technologies
 
+This project uses HTML, CSS, JavaScript, Bootstrap, Django/Python (including a number of imported libraries), PostgreSQL, Stripe, Amazon Web Services S3, Gmail SMTP server, Travis for continuous integration testing and Heroku for deployment.
+
 ## Testing
 
 1. Navbar
