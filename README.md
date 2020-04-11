@@ -1,5 +1,7 @@
 # Kerry Online Farmers Market
 
+![alt text](https://i.imgur.com/wRvzPpQ.jpg "Kerry Online Farmers Market as seen on different devices")
+
 Farmers markets are popular aspects of local community life around Kerry - however, they take place at fixed locations and on specific days and times.
 
 So how about opening up the availability of these locally grown and produced products by offering them for sale online? It is also potentially a very useful tool for farmers and producers to be able to continue selling during this period of lockdown and social isolation.
@@ -109,3 +111,5 @@ LOTS MORE TO COME IN HERE!
 * For getting *'background-attachment:fixed'* to work on iOS devices - https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile.
 
 ### Acknowledgements
+
+Thank you to the people of **Kenmare Community Chat** on Facebook for the original idea of an online farmers market. And to my project mentor Aaron Sinnott for his enthusiasm, advice, guidance and encouragement.
