@@ -86,8 +86,77 @@ This project uses HTML, CSS, JavaScript, Bootstrap, Django/Python (including a n
 ## Testing
 
 1. Navbar
+    * Clicking on **Home** defaults to the main landing page.
+    * Clicking on **Contact** redirects to the **'Get in touch'** form.
+    * Clicking on **Recipes** redirects to the main **'Recipes'** page.
+    * Clicking on **Register** redirects to the **'Create new account'** form.
+    * When any sub-sections of the site are visited, the landing page 'calls to action' of **'Login to buy'** and **'Login to sell'** are moved to the navbar.
+    * When a user is logged in:
+        * The **'Find'** search box becomes visible. Inputting a search term brings up the relevant results, or a message of 'Sorry, there are no products to display at the moment!'.
+        * **'Login to buy'** and **'Login to sell'** become simply **'Buy'** and **'Sell'**. 
+        * The **Cart** link becomes visible; clicking on it redirects to the **'Your cart'** page.
+        * The **Profile** link becomes visible; clicking on it redirects to a logged-in user's profile page.
+        * The **Logout** link becomes visible; this applies the correction action when clicked, it redirects to the homepage with a message of 'You have been successfully logged out'.
+    * In mobile view, the burger icon correctly displays the dropdown menu items. All links behave in the expected way, as above.
+    
+2. Landing page
+    * Clicking on **'Login to buy'** redirects the user to a login page.
+    * Clicking on **'Login to sell'** redirects the user to a login page.
+    * If a logged-in user happens to navigate to the homepage, these links revert to simply **'Buy'** (which redirects straight to the **'Browse products'** listings page) and **'Sell'** (which redirects straight to the **'Sell your product'** form page).
 
-LOTS MORE TO COME IN HERE!
+3.  Buyer login page
+    * If either of the username or password fields are left blank, a warning message appears saying 'Please fill in this field'.
+    * If invalid account details are entered, the message 'Your username or password is incorrect' appears.
+    * If login is successful, the user is taken directly to the **'Browse products'** page in order to begin shopping, accompanied by a message of 'You have successfully logged in!'.
+    * The 'Forgotten your password?' links redirects to the **'Password reset'** page.
+    * The 'you can register here' link redirects to the **'Create new account'** page.
+
+4. Seller login page
+    * If either of the username or password fields are left blank, a warning message appears saying 'Please fill in this field'.
+    * If invalid account details are entered, the message 'Your username or password is incorrect' appears.
+    * If login is successful, the user is taken directly to the **'Sell your product'** page so they can list a product for sale, accompanied by a message of 'You have successfully logged in!'.
+    * The 'Forgotten your password?' links redirects to the **'Password reset'** page.
+    * The 'you can register here' link redirects to the **'Create new account'** page.
+
+5. Contact page
+    * If any of the fields are left blank, a warning message appears saying 'Please fill in this field'.
+    * When all the contact form fields have been completed and the user hits 'Send', they are redirected to an **'Email confirmation'** page accompanied by a message of 'Your message has been sent and we will reply to you as soon as possible, many thanks!'.
+
+This is a screenshot of a successfully sent and received email. The 'from' address of stuartrichardsdigital@gmail.com is the EMAIL_HOST_USER as defined in the Django *settings.py* file. This is why users are asked on the original contact form to enter their email address as part of the message.
+
+![alt text](https://i.imgur.com/93seeRa.jpg "Email screenshot")
+
+6. Recipes pages
+    * User-submitted recipes are correctly displayed with a title and thumbnail image.
+    * Clicking on a title takes the user to a specific recipe page, where the ingredients and method are shown.
+    * Clicking on the link next to the 'add your own recipe' text takes the user to an **'Add your recipe'** form.
+    * The **'Method'** text area is correctly filled in with the default text '1)', with the aim of encouraging the user to have numbered preparation and cooking steps in their recipe method.
+    * If any of the fields are left blank, a warning message appears saying 'Please fill in this field', or 'Please select a file' in the case of the image upload field.
+    * Once all fields are completed and 'Save' is clicked, the user is redirected to the main **Recipes** page, where their new recipe is automatically listed and has its own page with ingredients/method.
+
+7. Registration page
+    * The email field requires '@' in the address.
+    * If there are any field requirement failures for Username, Password or Password confirmation, the registration process fails and a message appears saying 'Sorry, we were unable to register your account at this time, please check for error messages below'.
+    * If all the form field requirements are met, the new user is registered and a message appears saying 'ou have successfully registered and have been automatically logged in'.
+
+8. Product listings page
+    * Products are correctly listed with a thumbnail image, name, description and price.
+    * Numbers can be entered into a product's **'Quantity'** field either manually or by using the up/down arrows functionality.
+    * When the user clicks **'Add'**, a yellow number badge appears beside the **Cart** link on the navbar. There is also a message saying 'The product has been added to your cart'. This is repeated for each item added to the cart.
+    * Product listings also contain *'Edit this product'* and *'Delete this product'* links. These are only visible to the logged-in user who created the product object in the first place.
+        * Clicking **'Edit this product'** takes the user back to the **'Sell your product'** form page, with all the fields pre-filled with their original product details. The user can make changes to any of the fields, hit 'Save' and then be returned to the **'Browse products'** page where their edited product can be seen.
+        * Clicking **'Delete this product'** takes the user to a page where they are asked if they wish to confirm deletion or return to the main products page. Clicking 'Delete' returns them to the **'Browse products'** page where their item has now been removed.
+
+9. Sell your product page
+    * If any of the form fields are left blank, a warning message appears saying 'Please fill in this field', or 'Please select a file' in the case of the image upload field.
+    * When all form fields have been completed and the user hits 'Save', they are redirected to the **'Browse products'** page where their new listing can be found.
+
+10. Shopping cart page
+    * 
+
+11. Checkout page
+
+12. Password reset
 
 The site was manually viewed and tested in the Chrome and Firefox browsers on a Windows 10 laptop, as well on iOS and Android mobile/tablet devices.
 
