@@ -70,8 +70,14 @@ I used Balsamiq to create some wireframes for the project. They illustrate that 
 * The **'Recipes'** section displays a name and image linking to individual recipe pages, which contain the relevant ingredients and cooking method. There is also a link to a form for posting a new recipe on the site.
 * The login pages include a link to password reset functionality, which is an email system using the Gmail SMTP server.
 * All the processes for registration, logging in/out, using the contact form, password reset and making a purchase are followed by 'success' messages displayed to the user.
+* There is a floating 'back to top' button, primarily a piece of functionality for when mobile users scroll down a page and the navbar disappears from view.
 
 ### Features left to implement
+
+* As previously mentioned, the site is currently only set up to use a Stripe 'test card' - therefore, one of the most important features left to implement would be a 'real world' Stripe set-up, which could begin with all payments going to one place and sellers invoicing the website team for their payments, before a more robust system can be implemented whereby individual sellers get their money direct.
+* When a user's 'purchase history' is shown on their **'Profile'** page, it would be preferable to have an **'Add to cart'** option directly available on the relevant products. A 'date purchased' field could also be useful for customers.
+* In future there would be a need to give the user the ability to filter the listed products with category types including, for example, type of product, name of seller, etc. 
+* As and when a substantial database of recipes has been added to the site, a *search* functionality could be added to this section.
 
 ## Technologies
 
@@ -90,6 +96,7 @@ This was done with a view to ensuring that: all functions and interactivity resp
 I also ran my code through the W3C validator tools for HTML/CSS, as well as JSHint for Javascript and http://pep8online.com for Python.
 
 Travis and tests.py x2
+**'Profile'** pages currently contain repetition of items, i.e. if a user bought a product called 'Carrots' on two occasions then this would be displayed twice on their profile, which is a scenario that needs to be addressed.
 
 ## Django database details?
 
