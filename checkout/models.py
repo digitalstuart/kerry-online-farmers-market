@@ -4,13 +4,13 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Order(models.Model):
-    name = models.CharField(max_length=50, blank=False)
+    name = models.CharField(max_length=100, blank=False)
     phone_number = models.CharField(max_length=25, blank=False)
     email_address = models.EmailField(blank=False)
-    address_line_1 = models.CharField(max_length=40, blank=False)
-    address_line_2 = models.CharField(max_length=40, blank=False)
-    town = models.CharField(max_length=40, blank=False)
-    county = models.CharField(max_length=40, blank=False)
+    address_line_1 = models.CharField(max_length=50, blank=False)
+    address_line_2 = models.CharField(max_length=50, blank=False)
+    town = models.CharField(max_length=50, blank=False)
+    county = models.CharField(max_length=50, blank=False)
     eircode = models.CharField(max_length=20, blank=True)
     date = models.DateField()
     user = models.ForeignKey(User)
