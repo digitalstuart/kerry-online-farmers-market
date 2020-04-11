@@ -122,9 +122,9 @@ This project uses HTML, CSS, JavaScript, Bootstrap, Django/Python (including a n
     * If any of the fields are left blank, a warning message appears saying 'Please fill in this field'.
     * When all the contact form fields have been completed and the user hits 'Send', they are redirected to an **'Email confirmation'** page accompanied by a message of 'Your message has been sent and we will reply to you as soon as possible, many thanks!'.
 
-This is a screenshot of a successfully sent and received email. The 'from' address of stuartrichardsdigital@gmail.com is the EMAIL_HOST_USER as defined in the Django *settings.py* file. This is why users are asked on the original contact form to enter their email address as part of the message.
+This is a screenshot of a successfully sent and received email.
 
-![alt text](https://i.imgur.com/93seeRa.jpg "Email screenshot")
+![alt text](https://i.imgur.com/NXwvJEt.jpg "Email screenshot")
 
 6. Recipes pages
     * User-submitted recipes are correctly displayed with a title and thumbnail image.
@@ -152,11 +152,23 @@ This is a screenshot of a successfully sent and received email. The 'from' addre
     * When all form fields have been completed and the user hits 'Save', they are redirected to the **'Browse products'** page where their new listing can be found.
 
 10. Shopping cart page
-    * 
+    * An empty cart is accompanied by the message 'Your cart is empty, you can shop for items here', with a link to the **'Browse products'** page.
+    * Any products in the cart are listed with their name, a thumbnail image and the 'cost per item'. 
+    * The quantity of any item can be amended; upon doing so, the 'total cost' amount and the number badge on the **Cart** navbar link are updated accordingly.
+    * Clicking 'Checkout' takes the user to  the **Checkout** page.
 
 11. Checkout page
+    * The products being purchased are listed with their name, a thumbnail image, the number of each item being bought and the cost per item. A total cost is also displayed.
+    * Users are prompted to complete any missing fields before they can **'Submit Payment'**, although an Eircode is not required.
+    * Once the fields have been completed (using card number 4242424242424242, CVV 111), **'Submit Payment'** can be clicked and the user is returned to the **'Browse products'** page with a message of 'You have successfully paid!'. The number badge next to the **Cart** navbar link is also removed.
 
-12. Password reset
+12. Password reset pages
+    * The form at https://kerry-online-farmers-market.herokuapp.com/accounts/password-reset will not submit if an email address is not inputted.
+    * The process then works correctly as follows:
+    ![alt text](https://i.imgur.com/uslA9wp.jpg "Screenshot")
+    ![alt text](https://i.imgur.com/er4M5eW.jpg "Screenshot")
+    ![alt text](https://i.imgur.com/HKXeg0e.jpg "Screenshot")
+    ![alt text](https://i.imgur.com/Nahb7WA.jpg "Screenshot")
 
 The site was manually viewed and tested in the Chrome and Firefox browsers on a Windows 10 laptop, as well on iOS and Android mobile/tablet devices.
 
