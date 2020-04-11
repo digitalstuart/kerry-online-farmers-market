@@ -12,7 +12,7 @@ The site would require further work to make it fully functional in 'the real wor
 
 ## UX
 
-The landing page has a very clear and prominent website heading, with a bold and attractive background image that makes it clear what the site is about.
+The landing page has a very clear website heading, with a bold and attractive background image that makes it clear what the site is about.
 
 It also has two prominent calls to action - **'Login to buy'** or **'Login to sell**'. The website's two key pieces of functionality are clearly stated to the customer.
 
@@ -87,6 +87,8 @@ This was done with a view to ensuring that: all functions and interactivity resp
 
 I also ran my code through the W3C validator tools for HTML/CSS, as well as JSHint for Javascript and http://pep8online.com for Python.
 
+Travis and tests.py x2
+
 ## Django database details?
 
 ## Deployment
@@ -98,5 +100,12 @@ LOTS MORE TO COME IN HERE!
 ## Credits
 
 ### Content
+
+* For specifying the *login_required* redirect URL in the *checkout* function of *checkout/views.py* - https://stackoverflow.com/questions/3578882/how-to-specify-the-login-required-redirect-url-in-django.
+* For using *DeleteView* to delete objects - https://www.youtube.com/watch?time_continue=105&v=Go1yHB00hl8.
+* For the *models.py* and *forms.py* in my *contact* app, I referred to https://wsvincent.com/django-contact-form.
+* For a message saying 'your cart is empty' when there are no shopping cart items, I referred to [this documentation](https://books.google.ie/books?id=LwO1GzMN_QsC&pg=PA96&lpg=PA96&dq=django+shopping+cart+no+checkout+if+empty&source=bl&ots=_ocGe9GF6C&sig=ACfU3U1fXQ2O_oiZyvsDp246YqZJjkt8fQ&hl=en&sa=X&ved=2ahUKEwiKkcTgrtPoAhXCUBUIHeChDp8Q6AEwA3oECAwQKg#v=onepage&q=django%20shopping%20cart%20no%20checkout%20if%20empty&f=false) .
+* For running tests on Django forms - https://realpython.com/testing-in-django-part-1-best-practices-and-examples & https://www.youtube.com/watch?v=zUl-Tf-UEzw.
+* For getting *'background-attachment:fixed'* to work on iOS devices - https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile.
 
 ### Acknowledgements
