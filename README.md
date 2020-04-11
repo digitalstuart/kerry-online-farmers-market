@@ -176,8 +176,13 @@ This was done with a view to ensuring that: all functions and interactivity resp
 
 I also ran my code through the W3C validator tools for HTML/CSS, as well as JSHint for Javascript and http://pep8online.com for Python.
 
-Travis and tests.py x2
-**'Profile'** pages currently contain repetition of items, i.e. if a user bought a product called 'Carrots' on two occasions then this would be displayed twice on their profile, which is a scenario that needs to be addressed.
+The site's development process has been run alongside continuous integration testing through Travis. Where any builds pulled through from the GitHub master repository happened to fail, the problem was identified and fixed so that the build could then pass.
+
+As part of this project, there is a simple test of the Product model in *products/tests.py* as well as a test of the UserLoginForm in *accounts/tests.py*. These both passed with 'OK' when running *python3 manage.py test*. 
+
+### Testing note
+
+The site's **'Profile'** pages were found to currently contain repetition of items, i.e. if a user bought a product called 'Carrots' on two occasions then this would be displayed twice on their profile, which is a scenario that needs to be rectified.
 
 ## Django database details?
 
