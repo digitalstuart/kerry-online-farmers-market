@@ -24,6 +24,7 @@ class UserRegistrationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['email', 'username', 'password1', 'password2']
+        labels = {'email': 'REQUIRED - please enter an email address'}
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
