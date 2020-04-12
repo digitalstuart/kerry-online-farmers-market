@@ -35,6 +35,7 @@ class delete_product(DeleteView):
     """
     Allows user to delete a product
     Return to products page after deletion
+    With reference to https://www.youtube.com/watch?time_continue=105&v=Go1yHB00hl8
     """
     model = Product
     template_name = 'products/product_delete.html'
