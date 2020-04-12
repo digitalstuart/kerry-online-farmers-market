@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 
-/* SITE-WIDE */
+/* STYLING FOR MULTIPLE PARTS OF SITE */
 
 body {
     line-height: 1.8;
     color: white;   
 }
+
+/* Code for getting 'background-attachment:fixed' to work on iOS devices, with reference to
+https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile */
 
 body:before {
   content: "";
@@ -35,6 +38,13 @@ p {
     padding-top: 20px;
 }
 
+.block-divider {
+    width: 100%;
+    height: 5px;
+    border: 0;
+    background-color: white;
+}
+
 /* Back to top button, with reference to https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
 
 #myBtn {
@@ -58,6 +68,73 @@ p {
     background-color:slategrey;
 }
 
+.navbar, .about-buy-sell, h1 {
+    font-family: 'Spicy Rice', sans-serif;
+}
+
+a, .nav-text, .navbar-brand {
+    color: white
+}
+
+h1 {    
+    font-size: 60px;
+    text-align: center;
+}
+
+button {
+    font-size: 1rem;
+}
+
+a:hover, .nav-text:hover, .btn:hover {
+    text-decoration: none;
+    color: #DECECB;
+}
+
+.accountform, .contactform, .sellform, .deleteform, .recipeform {
+    padding-top: 20px;
+    padding-bottom: 12px;
+}
+
+.product, .recipe {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.panel-default {
+    border-color: transparent;
+    padding: 0 10px;
+}
+
+.panel-body {
+    height: 100%;
+    width: 80%;
+    margin: auto;    
+}
+
+caption p {
+    word-wrap: break-word;
+}
+
+.btn {
+    color: white;
+}
+
+.password-pages, .contact-success-page {
+    padding-top: 20px;
+}
+
+/* NAVBAR */
+
 .navbar {
     background-color: transparent;
 }
@@ -75,54 +152,12 @@ p {
     padding-right: 0;
 }
 
-.navbar, .about-buy-sell, h1 {
-    font-family: 'Spicy Rice', sans-serif;
-}
-
 .nav-item {
     padding-left: 8px;
     padding-right: 8px;
 }
 
-button {
-    font-size: 1rem;
-}
-
-a, .nav-text, .navbar-brand {
-    color: white
-}
-
-h1 {    
-    font-size: 60px;
-    text-align: center;
-}
-
-.margin {
-    margin-top: 90px;
-    margin-bottom: 45px;
-}
-
-.about-buy-sell {
-    padding-top: 45px;
-}
-
-.bubbles {    
-    font-size: 50px;
-}
-
-a:hover, .nav-text:hover, .btn:hover {
-    text-decoration: none;
-    color: #DECECB;
-}
-
-.icon-bar {
-    background-color: #fff;
-}
-
-.accountform, .contactform, .sellform, .deleteform, .recipeform {
-    padding-top: 20px;
-    padding-bottom: 12px;
-}
+/* Badge for displaying number of cart items */
 
 .badge {
     padding-left: 9px;
@@ -137,23 +172,22 @@ a:hover, .nav-text:hover, .btn:hover {
     background-color: #c67605;
 }
 
-.product, .recipe {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+/* LANDING PAGE */
+
+.margin {
+    margin-top: 90px;
+    margin-bottom: 45px;
 }
 
-.recipe-main {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
+.about-buy-sell {
+    padding-top: 45px;
 }
+
+.bubbles {    
+    font-size: 50px;
+}
+
+/* RECIPES PAGES */
 
 .responsive {
   max-width: 100%;
@@ -168,32 +202,7 @@ a:hover, .nav-text:hover, .btn:hover {
     text-align: left;
 }
 
-caption p {
-    word-wrap: break-word;
-}
-
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
 /* PRODUCTS PAGE */
-
-.btn {
-    color: white;
-}
-
-.panel-default {
-    border-color: transparent;
-    padding: 0 10px;
-}
-
-.panel-body {
-    height: 100%;
-    width: 80%;
-    margin: auto;    
-}
 
 .product-description {
     margin-bottom: 8px;
@@ -203,13 +212,6 @@ caption p {
 .product-price {
     margin-bottom: 8px;
     text-align: left;
-}
-
-.block-divider {
-    width: 100%;
-    height: 5px;
-    border: 0;
-    background-color: white;
 }
 
 /* CART PAGE */
@@ -238,21 +240,9 @@ caption p {
     padding-bottom: 16px;
 }
 
-.password-pages, .contact-success-page {
-    padding-top: 20px;
-}
-
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 768px) {
-
-h1 {
-    font-size: 50px;
-}
-
-.bubbles {
-    font-size: 40px;
-}
 
 .navbar-collapse {
     padding-top: 10px;
@@ -273,6 +263,14 @@ h1 {
 
 .search-box {
     padding-right: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.bubbles {
+    font-size: 40px;
 }
 
 .panel-body {
