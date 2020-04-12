@@ -196,6 +196,10 @@ LOTS MORE TO COME IN HERE!
 
 ## Credits
 
+The walkthrough projects in Code Institute's Full Stack Frameworks with Django module (Blog All About It and ECommerce Mini Project) were vital in providing a starting point for this project.
+
+
+
 Course walkthroughs
 
 ### Content
