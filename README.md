@@ -186,7 +186,11 @@ The site's **'Profile'** pages were found to currently contain repetition of ite
 
 If the Code Institute project assessor encounters any issues with the Contact or Password Reset functionality, e.g. error pages or not receiving the password reset email, please could they email stuartrichardsdigital@gmail.com. I have experienced some instability with Gmail's 'DisplayUnlockCaptcha' process, which I have been using to ensure the SMTP server works consistently.
 
-## Django database details?
+## Database schema
+
+**Users** have a foreign key relationship with **Orders** and **Order Line Items** - this allows products which have been bought to be displayed on a user's **Profile** page.
+
+**Users** also have a foreign key relationship with **Products**, in order for newly-created objects to be tied to a specific user.
 
 ## Deployment
 
@@ -216,6 +220,11 @@ If the Code Institute project assessor encounters any issues with the Contact or
 
 * The config variables for using the Gmail SMTP server are defined in *'settings.py'*.
 * I had to run *'DisplayUnlockCaptcha'* on my Gmail account (https://accounts.google.com/DisplayUnlockCaptcha) in order to avoid getting an SMTPAuthenticationError when using the site's Contact or Password Reset functionality.
+
+### Travis
+
+* For running continuous integration testing, I linked my GitHub account with Travis and integrated my *'kerry-online-farmers-market'* repository with the system.
+* For any builds that failed, I found the issue and fixed the problem before pushing the amended code to GitHub again in order to see if the build would then pass through Travis.
 
 ### Cloning
 
