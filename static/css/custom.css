@@ -7,7 +7,7 @@ body {
     color: white;   
 }
 
-/* Code for getting 'background-attachment:fixed' to work on iOS devices, with reference to
+/* Code for getting 'background-attachment:fixed' to work on iOS devices, from
 https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile */
 
 body:before {

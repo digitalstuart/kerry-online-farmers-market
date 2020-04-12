@@ -1,4 +1,4 @@
-# Kerry Online Farmers Market - https://kerry-online-farmers-market.herokuapp.com
+# Kerry Online Farmers' Market - visit the site at https://kerry-online-farmers-market.herokuapp.com
 
 ![alt text](https://i.imgur.com/wRvzPpQ.jpg "Kerry Online Farmers Market as seen on different devices")
 
@@ -6,7 +6,7 @@ Farmers markets are popular aspects of local community life around Kerry - howev
 
 So how about opening up the availability of these locally grown and produced products by offering them for sale online? It is also potentially a very useful tool for farmers and producers to be able to continue selling during this period of lockdown and social isolation.
 
-That is the purpose of Kerry Online Farmers Market. Producers can list their items and products for sale; website customers can buy them. There is also an area of the site for users to post any recipes they wish to share which include ingredients purchased from the online market.
+That is the purpose of Kerry Online Farmers' Market. Producers can list their items and products for sale; website customers can buy them. There is also an area of the site for users to post any recipes they wish to share which include ingredients purchased from the online market.
 
 The aim of the project at this point in its life cycle is to display what I have learnt about building an ecommerce site with Django and Python. Registered users can add objects to a database; customers can browse and select products for purchase; then there is a shopping cart and checkout functionality.
 
@@ -54,17 +54,16 @@ I used Balsamiq to create some wireframes for the project. They illustrate that 
 ### Existing features
 
 * The site has a responsive collapsible navbar, with a burger menu and dropdown items displayed for smaller devices.
-* There is a **'Find'** search box available on the navbar.
 * The **'Register'** option links to a user registration form, where an email address, username and password are required to register with the site.
 * The **'Login to buy'** link redirects users straight to the **'Browse products'** page once they have successfully logged in.
 * The **'Login to sell'** link redirects users straight to the **'Sell your product'** page once they have successfully logged in.
-* Once a user is logged, the **'Login to buy'** and **'Login to sell'** links are replaced with simply **'Buy'** and **'Sell'**. The **'Cart'** link also becomes available on the navbar, while **'Register'** is no longer shown but **'Profile'** and **'Logout'** are.
+* Once a user is logged in, the **'Login to buy'** and **'Login to sell'** links are replaced with simply **'Buy'** and **'Sell'**. The **'Cart'** link and **'Find'** search box also become available on the navbar, while **'Register'** is no longer shown but **'Profile'** and **'Logout'** are.
 * There is a form for listing products for sale. Once completed and saved, the item then becomes available on the **'Browse products'** page.
 * Each product listing includes a name, image, description and price. Users can select the quantity of any item and add to their cart.
 * Product listings can be edited or deleted via links displayed on the **'Browse products'** page, however these are only visible to the logged-in user who originally created the items.
 * The **'Cart'** navbar link automatically updates with a 'number badge' whenever items are added.
 * The shopping cart page has options to amend the quantity of items for purchase, as well as a **'Checkout'** button.
-* The **'Checkout'** page itself displays the items being bought, the total cost and a simple form for personal and payment details. NB: this currently only works with the Stripe testing default of card number '4242424242424242' and security code '111'.
+* The **'Checkout'** page itself displays the items being bought, the total cost and a simple form for personal and payment details. NB: you can currently only produce actual functionality from the *'Submit Payment'* button by using the Stripe testing default of card number '4242424242424242' and security code '111'.
 * A logged-in user's **'Profile'** page shows their username, registered email address and the items they have previously purchased.
 * There is a **'Contact'** page where anyone can send a message to the site; this uses the Gmail SMTP server.
 * The **'Recipes'** section displays a name and image linking to individual recipe pages, which contain the relevant ingredients and cooking method. There is also a link to a form for posting a new recipe on the site.
@@ -74,9 +73,9 @@ I used Balsamiq to create some wireframes for the project. They illustrate that 
 
 ### Features left to implement
 
-* As previously mentioned, the site is currently only set up to use a Stripe 'test card' - therefore, one of the most important features left to implement would be a 'real world' Stripe set-up, which could begin with all payments going to one place and sellers invoicing the website team for their payments, before a more robust system can be implemented whereby individual sellers get their money direct.
+* As previously mentioned, the site is currently only set up to use a Stripe 'test card' - therefore, one of the most important features left to implement would be a 'real world' Stripe set-up. This could begin with all payments going to one place and sellers invoicing the website team for their payments, before a more robust system can be implemented whereby individual sellers get their money direct.
 * When a user's 'purchase history' is shown on their **'Profile'** page, it would be preferable to have an **'Add to cart'** option directly available on the relevant products. A 'date purchased' field could also be useful for customers.
-* In future there would be a need to give the user the ability to filter the listed products with category types including, for example, type of product, name of seller, etc. 
+* In future there would be a need to give users the ability to filter the listed products with category types including, for example, type of product, name of seller, etc. 
 * As and when a substantial database of recipes has been added to the site, a *search* functionality could be added to this section.
 
 ## Technologies
@@ -96,7 +95,7 @@ This project uses HTML, CSS, JavaScript, Bootstrap, Django/Python (including a n
         * **'Login to buy'** and **'Login to sell'** become simply **'Buy'** and **'Sell'**. 
         * The **Cart** link becomes visible; clicking on it redirects to the **'Your cart'** page.
         * The **Profile** link becomes visible; clicking on it redirects to a logged-in user's profile page.
-        * The **Logout** link becomes visible; this applies the correction action when clicked, it redirects to the homepage with a message of 'You have been successfully logged out'.
+        * The **Logout** link becomes visible; this applies the correct action when clicked, redirecting the user to the homepage with a message of 'You have been successfully logged out'.
     * In mobile view, the burger icon correctly displays the dropdown menu items. All links behave in the expected way, as above.
     
 2. Landing page
@@ -159,8 +158,8 @@ This is a screenshot of a successfully sent and received email.
 
 11. Checkout page
     * The products being purchased are listed with their name, a thumbnail image, the number of each item being bought and the cost per item. A total cost is also displayed.
-    * Users are prompted to complete any missing fields before they can **'Submit Payment'**, although an Eircode is not required.
-    * Once the fields have been completed (using card number 4242424242424242, CVV 111), **'Submit Payment'** can be clicked and the user is returned to the **'Browse products'** page with a message of 'You have successfully paid!'. The number badge next to the **Cart** navbar link is also removed.
+    * Users are prompted to complete any missing personal details fields before they can **'Submit Payment'**, although an Eircode is not required.
+    * Once the fields have been completed (using card number 4242424242424242, CVV 111 and a card expiry date in the future), **'Submit Payment'** can be clicked and the user is returned to the **'Browse products'** page with a message of 'You have successfully paid!'. The number badge next to the **Cart** navbar link is also removed.
 
 12. Password reset pages
     * The form at https://kerry-online-farmers-market.herokuapp.com/accounts/password-reset will not submit if an email address is not inputted.
@@ -214,7 +213,7 @@ If the Code Institute project assessor encounters any issues with the Contact or
 
 * I created a bucket with 'static website hosting' called **kerry-online-farmers-market** in the S3 cloud storage service of AWS.
 * The bucket contains all the website's images in a *'media'* folder and the CSS/JS files in a *'static'* folder.
-* In Gitpod, I imported AWS' S3Boto3Storage backend into a file called *'custom_storages.py'*, which references the static and media storage locations as defined in *'settings.py'* alongside other AWS config vars.
+* In Gitpod, I imported AWS' **S3Boto3Storage** backend into a file called *'custom_storages.py'*, which references the static and media storage locations as defined in *'settings.py'* alongside other AWS config vars.
 
 ### Gmail SMTP
 

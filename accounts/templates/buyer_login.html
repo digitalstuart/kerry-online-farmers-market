@@ -1,7 +1,7 @@
 {% extends 'second_base.html' %}
 {% load bootstrap_tags %}
 {% block content %}
-<!-- This login form redirects to the 'browse products' page upon successful login -->
+<!-- Login form redirects to the 'browse products' page upon successful login -->
 <div class="container sections">
     <h1 class="section-heading">Please log in to buy</h1>
 	<form method="POST" action="{% url 'login_buyer' %}?next={{ next }}" class="accountform">

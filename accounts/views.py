@@ -38,7 +38,7 @@ def login_seller(request):
 def login_buyer(request):
     """Return a login form which redirects to a page for selling products"""
     if request.user.is_authenticated:
-        return redirect('checkout')
+        return redirect('products')
     if request.method == "POST":
         login_form = UserLoginForm(request.POST)
 
