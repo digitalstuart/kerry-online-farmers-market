@@ -1,54 +1,45 @@
 {% extends 'second_base.html' %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
-
 {% block content %}
 <h1 class="section-heading">Your cart</h1>
 <div class="container">
 	<div class="row row-flex">
     {% if cart_items %}
 		{% for item in cart_items %}
-
 		<div class="col-sm-6 col-md-4 display panel panel-default">
-
-			<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-
+			<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
+            </div>
 			<div class="caption">
 				<h3>{{ item.product.name }}</h3>
 				<p>Cost per item - €{{ item.product.price }}</p>
-				
-
-					<form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-						{% csrf_token %}
-						<div class="form-group">
-							<label for="exampleInputAmount" class="sr-only">New Qty</label>
-							<div class="input-group">
-								<div class="input-group-addon quantity">Qty</div>
-								<input name="quantity" type="number" min="0" max="999" class="form-control amend-form">
-								<div class="input-group-addon amend-number">{{item.quantity}}</div>
-							</div>
-						</div>
-						<button type="submit" class="btn btn-primary amend-button">Amend</button>
-					</form>
-				
+				<form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="exampleInputAmount" class="sr-only">New Qty</label>
+						<div class="input-group">
+							<div class="input-group-addon quantity">Qty</div>
+							<input name="quantity" type="number" min="0" max="999" class="form-control amend-form">
+							<div class="input-group-addon amend-number">{{item.quantity}}</div>
+					    </div>
+				    </div>
+					<button type="submit" class="btn btn-primary amend-button">Amend</button>
+				</form>
 			</div>
             <hr class="block-divider">
 		</div>
-        
-		{% endfor %}
-        {% else %}
-        <p>Your cart is empty, you can shop for items <a href="{% url 'products' %}">here</a></p>
-        {% endif %}
+        {% endfor %}
+    {% else %}
+    <p>Your cart is empty, you can shop for items <a href="{% url 'products' %}">here</a></p>
+    {% endif %}
 	</div>
 </div>
 {% if cart_items %}
 <div class="container checkout-container">
 	<div class="row checkout-row">
 		<p class=cart-cost>Total cost - €{{ total }}</p>
-		<a href="{% url 'checkout' %}" class="btn btn-success checkout-button"
-			role="button">Checkout</a>
+		<a href="{% url 'checkout' %}" class="btn btn-success checkout-button" role="button">Checkout</a>
 	</div>
 </div>
 {% endif %}
-
 {% endblock %}

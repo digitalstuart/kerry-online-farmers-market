@@ -1,5 +1,4 @@
 {% extends 'second_base.html' %}
-
 {% block content %}
 <div class="container sections text-center">
 	<h1 class="section-heading">{{ user }}'s profile</h1>
@@ -8,17 +7,15 @@
 	<h1>Products you've bought</h1>
     <p>Use the 'Find' box to buy products again</p>
 	<div class="row row-flex">
-
 		{% for products in user.products.all %}
 		<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3 display panel panel-default">
 			<div class="panel-body">
-				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ products.product.image }}')"></div>
+				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ products.product.image }}')">
+                </div>
 				<h3>{{ products.product.name }}</h3>
 				<p><strong>€{{ products.product.price }}</strong></p>
 			</div>
-		</div>
-        
-        
+		</div>       
 		{% endfor %}
 	</div>
 </div>

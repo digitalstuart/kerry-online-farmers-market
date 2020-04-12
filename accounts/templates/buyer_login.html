@@ -1,18 +1,15 @@
 {% extends 'second_base.html' %}
 {% load bootstrap_tags %}
-
 {% block content %}
-
 <div class="container sections">
-<h1 class="section-heading">Please log in to buy</h1>
+    <h1 class="section-heading">Please log in to buy</h1>
 	<form method="POST" action="{% url 'login_buyer' %}?next={{ next }}" class="accountform">
-		<fieldset class="form-group">
-			{% csrf_token %} {{ login_form | as_bootstrap }}
-			<button type="submit" class="btn btn-primary">Login</button>
-		</fieldset>
+	    <fieldset class="form-group">
+		    {% csrf_token %} {{ login_form | as_bootstrap }}
+		    <button type="submit" class="btn btn-primary">Login</button>
+	    </fieldset>
 	</form>
 	<p>Forgotten your password? You can <a href="{% url 'password_reset' %}">reset it here</a></p>
-
 	<p>If you do not already have an account, you can <a href="{% url 'registration' %}">register here</a></p>
 </div>
 {% endblock %}

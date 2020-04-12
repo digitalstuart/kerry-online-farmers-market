@@ -1,5 +1,4 @@
 {% extends 'second_base.html' %}
-
 {% block content %}
 <div class="container text-center">
     <h1 class="section-heading">Recipes</h1>
@@ -9,21 +8,11 @@
 		{% for recipe in recipes %}
 		<div class="col-sm-6 col-md-4 display panel panel-default">
 			<div class="panel-body">
-
-            
-            
-            <h3><a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.name }}</a></h3>
-				
-                <div class="recipe" style="background-image: url('{{ MEDIA_URL }}{{ recipe.image }}')"></div>
+                <h3><a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.name }}</a></h3>
+	            <div class="recipe" style="background-image: url('{{ MEDIA_URL }}{{ recipe.image }}')">
+                </div>
                 <hr class="block-divider">
-        
-            
-
-				
-				
-                
-				
-			</div>
+        	</div>
 		</div>
 		{% endfor %}
 	</div>

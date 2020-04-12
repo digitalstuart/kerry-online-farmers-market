@@ -1,18 +1,14 @@
 {% extends 'second_base.html' %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
-
-
-
 {% block content %}
 <div class="container sections">
-{% if messages %}
+    {% if messages %}
     <div class="text-center">
         {% for message in messages %} {{ message }} {% endfor %}
     </div>
     {% endif %}
-<div>
-<h1 class="section-heading">Create new account</h1>
+    <h1 class="section-heading">Create new account</h1>
 	<form method="POST" class="accountform">
 		<fieldset class="form-group">
 			{% csrf_token %}
@@ -21,5 +17,4 @@
 		</fieldset>
 	</form>
 </div>
-
 {% endblock %}
