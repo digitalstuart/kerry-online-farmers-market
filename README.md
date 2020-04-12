@@ -1,4 +1,4 @@
-# Kerry Online Farmers Market
+# Kerry Online Farmers Market - https://kerry-online-farmers-market.herokuapp.com
 
 ![alt text](https://i.imgur.com/wRvzPpQ.jpg "Kerry Online Farmers Market as seen on different devices")
 
@@ -137,7 +137,7 @@ This is a screenshot of a successfully sent and received email.
 7. Registration page
     * The email field requires '@' in the address.
     * If there are any field requirement failures for Username, Password or Password confirmation, the registration process fails and a message appears saying 'Sorry, we were unable to register your account at this time, please check for error messages below'.
-    * If all the form field requirements are met, the new user is registered and a message appears saying 'ou have successfully registered and have been automatically logged in'.
+    * If all the form field requirements are met, the new user is registered and a message appears saying 'You have successfully registered and have been automatically logged in'.
 
 8. Product listings page
     * Products are correctly listed with a thumbnail image, name, description and price.
@@ -155,7 +155,7 @@ This is a screenshot of a successfully sent and received email.
     * An empty cart is accompanied by the message 'Your cart is empty, you can shop for items here', with a link to the **'Browse products'** page.
     * Any products in the cart are listed with their name, a thumbnail image and the 'cost per item'. 
     * The quantity of any item can be amended; upon doing so, the 'total cost' amount and the number badge on the **Cart** navbar link are updated accordingly.
-    * Clicking 'Checkout' takes the user to  the **Checkout** page.
+    * Clicking 'Checkout' takes the user to the **Checkout** page.
 
 11. Checkout page
     * The products being purchased are listed with their name, a thumbnail image, the number of each item being bought and the cost per item. A total cost is also displayed.
@@ -176,7 +176,7 @@ This was done with a view to ensuring that: all functions and interactivity resp
 
 I also ran my code through the W3C validator tools for HTML/CSS, as well as JSHint for Javascript and http://pep8online.com for Python.
 
-The site's development process has been run alongside continuous integration testing through Travis. Where any builds pulled through from the GitHub master repository happened to fail, the problem was identified and fixed so that the build could then pass.
+The site's development process has been run alongside continuous integration testing through Travis. Where any builds pulled through from the GitHub repository happened to fail, the problem was identified and fixed so that the build could then pass.
 
 As part of this project, there is a simple test of the Product model in *products/tests.py* as well as a test of the UserLoginForm in *accounts/tests.py*. These both passed with 'OK' when running *python3 manage.py test*. 
 
@@ -190,24 +190,50 @@ If the Code Institute project assessor encounters any issues with the Contact or
 
 ## Deployment
 
-* I created a new app in Heroku called *kerry-online-farmers-market* with the region selected as 'Europe'.
-LOTS MORE TO COME IN HERE!
-* I then clicked 'Open app' and my website was deployed live to https://kerry-online-farmers-market.herokuapp.com.
+### Heroku
+
+* This site is deployed through Heroku, with an app called *kerry-online-farmers-market* and the region selected as 'Europe'.
+* The app is connected to my relevant GitHub repository for the deployment method.
+* After executing *git add*, *git commit* and *git push* from my Gitpod code to GitHub, I could then run manual deployments in Heroku from the GitHub master branch in order for my site to be deployed live to https://kerry-online-farmers-market.herokuapp.com.
+* The app runs with a **PostgreSQL** database, which was selected from *Resources > Adds-ons* in the Heroku dashboard.
+* In *Settings > Reveal Config Vars*, I have specified the Postgres database URL, Stripe keys, Amazon Web Services keys, the Django secret key and config vars for my *EMAIL_BACKEND*. 
+
+### Gitpod
+
+* The command *pip3 freeze > requirements.txt* creates a file for Heroku to know the requirements and Django libraries for running the app.
+* The command *echo web: python3 manage.py > Procfile*, tells Heroku to refer to my *manage.py* file in order to begin running the application.
+* I created an *env.py* file containing the same environment variables as those in Heroku *Settings > Reveal Config Vars*.
+* These environment variables are then fetched into the relevant sections of the *settings.py* file.
+* The *env.py* file is referenced in a *.gitignore* file in order to mask secret key and password details.
+
+### Amazon Web Services
+
+* I created a bucket with 'static website hosting' called **kerry-online-farmers-market** in the S3 cloud storage service of AWS.
+* The bucket contains all the website's images in a *'media'* folder and the CSS/JS files in a *'static'* folder.
+* In Gitpod, I imported AWS' S3Boto3Storage backend into a file called *'custom_storages.py'*, which references the static and media storage locations as defined in *'settings.py'* alongside other AWS config vars.
+
+### Gmail SMTP
+
+* The config variables for using the Gmail SMTP server are defined in *'settings.py'*.
+* I had to run *'DisplayUnlockCaptcha'* on my Gmail account (https://accounts.google.com/DisplayUnlockCaptcha) in order to avoid getting an SMTPAuthenticationError when using the site's Contact or Password Reset functionality.
+
+### Cloning
+
+* In order to clone this project, you should paste https://github.com/digitalstuart/kerry-online-farmers-market.git into your chosen editor's terminal. Then type *git remote rm origin* into the terminal to sever the link with the original.
+* You would also need to use your own PostgreSQL database, AWS bucket and SMTP server, as well as creating your own config and environment variables (plus *env.py* and *.gitignore* files).
 
 ## Credits
 
-The walkthrough projects in Code Institute's Full Stack Frameworks with Django module (Blog All About It and ECommerce Mini Project) were vital in providing a starting point for this project.
+The walkthrough projects in Code Institute's Full Stack Frameworks with Django module (Blog All About It and ECommerce Mini Project) were vital in providing a starting point for this website.
 
-
-
-Course walkthroughs
+Therefore, much of the groundwork for, in particular, the Accounts, Cart and Checkout apps was laid from these sources. Where code has been taken from the course projects' original models and views in these apps, it has then been edited, revised or added to for my purposes. 
 
 ### Content
 
 * For specifying the *login_required* redirect URL in the *checkout* function of *checkout/views.py* - https://stackoverflow.com/questions/3578882/how-to-specify-the-login-required-redirect-url-in-django.
 * For using *DeleteView* to delete objects - https://www.youtube.com/watch?time_continue=105&v=Go1yHB00hl8.
 * For the *models.py* and *forms.py* in my *contact* app, I referred to https://wsvincent.com/django-contact-form.
-* For a message saying 'your cart is empty' when there are no shopping cart items, I referred to [this documentation](https://books.google.ie/books?id=LwO1GzMN_QsC&pg=PA96&lpg=PA96&dq=django+shopping+cart+no+checkout+if+empty&source=bl&ots=_ocGe9GF6C&sig=ACfU3U1fXQ2O_oiZyvsDp246YqZJjkt8fQ&hl=en&sa=X&ved=2ahUKEwiKkcTgrtPoAhXCUBUIHeChDp8Q6AEwA3oECAwQKg#v=onepage&q=django%20shopping%20cart%20no%20checkout%20if%20empty&f=false) .
+* For a message saying 'your cart is empty' when there are no shopping cart items, I referred to [this documentation](https://books.google.ie/books?id=LwO1GzMN_QsC&pg=PA96&lpg=PA96&dq=django+shopping+cart+no+checkout+if+empty&source=bl&ots=_ocGe9GF6C&sig=ACfU3U1fXQ2O_oiZyvsDp246YqZJjkt8fQ&hl=en&sa=X&ved=2ahUKEwiKkcTgrtPoAhXCUBUIHeChDp8Q6AEwA3oECAwQKg#v=onepage&q=django%20shopping%20cart%20no%20checkout%20if%20empty&f=false).
 * For running tests on Django forms - https://realpython.com/testing-in-django-part-1-best-practices-and-examples & https://www.youtube.com/watch?v=zUl-Tf-UEzw.
 * For getting *'background-attachment:fixed'* to work on iOS devices - https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile.
 
