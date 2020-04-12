@@ -180,9 +180,11 @@ The site's development process has been run alongside continuous integration tes
 
 As part of this project, there is a simple test of the Product model in *products/tests.py* as well as a test of the UserLoginForm in *accounts/tests.py*. These both passed with 'OK' when running *python3 manage.py test*. 
 
-### Testing note
+### Testing notes
 
 The site's **'Profile'** pages were found to currently contain repetition of items, i.e. if a user bought a product called 'Carrots' on two occasions then this would be displayed twice on their profile, which is a scenario that needs to be rectified.
+
+If the Code Institute project assessor encounters any issues with the Contact or Password Reset functionality, e.g. error pages or not receiving the password reset email, please could they email stuartrichardsdigital@gmail.com. I have experienced some instability with Gmail's 'DisplayUnlockCaptcha' process, which I have been using to ensure the SMTP server works consistently.
 
 ## Django database details?
 
@@ -193,6 +195,8 @@ LOTS MORE TO COME IN HERE!
 * I then clicked 'Open app' and my website was deployed live to https://kerry-online-farmers-market.herokuapp.com.
 
 ## Credits
+
+Course walkthroughs
 
 ### Content
 
