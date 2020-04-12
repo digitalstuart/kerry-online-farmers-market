@@ -5,6 +5,7 @@
 <div class="container sections">
 	{% if messages %}
 	<div class="text-center">
+        <!-- Shows 'login success' message from 'login_seller' function in accounts/views.py -->
 		{% for message in messages %} {{ message }} {% endfor %}
 	</div>
 	{% endif %}

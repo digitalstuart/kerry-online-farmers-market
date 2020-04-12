@@ -1,5 +1,6 @@
 {% extends 'second_base.html' %}
 {% block content %}
+<!-- Profile pages are only available for logged-in users -->
 <div class="container sections text-center">
 	<h1 class="section-heading">{{ user }}'s profile</h1>
 	<p>Your registered email address is {{ profile.email }}</p>
