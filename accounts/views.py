@@ -4,9 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
 
-def index(request):
-    """Return the index.html file"""
-    return render(request, 'index.html')
 
 @login_required
 def logout(request):
@@ -17,7 +14,7 @@ def logout(request):
 
 
 def login_seller(request):
-    """Return a login page"""
+    """Return a login form which redirects to a page for buying products"""
     if request.user.is_authenticated:
         return redirect('new_product')
     if request.method == "POST":
@@ -37,8 +34,9 @@ def login_seller(request):
         login_form = UserLoginForm()
     return render(request, 'seller_login.html', {'login_form': login_form})
 
+
 def login_buyer(request):
-    """Return a login page"""
+    """Return a login form which redirects to a page for selling products"""
     if request.user.is_authenticated:
         return redirect('checkout')
     if request.method == "POST":
@@ -57,6 +55,7 @@ def login_buyer(request):
     else:
         login_form = UserLoginForm()
     return render(request, 'buyer_login.html', {'login_form': login_form})
+
 
 def registration(request):
     """Render the registration page"""
@@ -80,6 +79,7 @@ def registration(request):
         registration_form = UserRegistrationForm()
     return render(request, 'registration.html', {
         "registration_form": registration_form})
+
 
 def user_profile(request):
     """The user's profile page"""

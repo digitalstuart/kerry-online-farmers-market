@@ -1,10 +1,10 @@
 from django.test import TestCase
 from .models import Product
 
+
 class ProductTest(TestCase):
     """
-    Here we'll define the tests that we'll run against our
-    Product model
+    Tests to run against the Product model
     """
     def test_str(self):
         test_name = Product(name='A product')

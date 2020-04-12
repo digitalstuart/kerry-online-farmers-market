@@ -2,7 +2,7 @@ from django.db import models
 from products.models import Product
 from django.contrib.auth.models import User
 
-# Create your models here.
+
 class Order(models.Model):
     name = models.CharField(max_length=100, blank=False)
     phone_number = models.CharField(max_length=25, blank=False)
